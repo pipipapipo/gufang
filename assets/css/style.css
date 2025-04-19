@@ -1,0 +1,423 @@
+/* Reset default styles and enable better box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* Change header style when scrolled */
+.scrolled {
+    padding: 1rem 5rem;
+    background-color: #2E5252;
+}
+
+.logo>a {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar styles */
+.navbar>ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar>ul>li>a {
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar>ul>li>a:hover {
+    color: #2E5252;
+}
+
+.scrolled .navbar>ul>li>a:hover {
+    color: #fff;
+}
+
+/* Section spacing */
+section {
+    padding: 6rem 5rem;
+}
+
+/* Hero section */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/bearded-man-wearing-red-beanie_23-2148378557.jpg"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    background-position: top center;
+}
+
+.home-content {
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.home-content>h6 {
+    font-size: 1.725rem;
+}
+
+.home-content>h2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* About section layout */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.img-wrapper {
+    width: 45%;
+}
+
+.img-wrapper img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.about-me {
+    width: 55%;
+}
+
+.about-me>h6 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Skills section */
+.skills {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2ECE4;
+}
+
+.skill-content-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.skills-content>h6 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.contact{
+    background-color: #2E5252;
+}
+
+/* Contact Section */
+.contact-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contant-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    width: 40%;
+}
+
+
+
+.contact-info{
+    text-align: center;
+}
+
+.map-wrapper{
+    width: 50%;
+}
+
+.map-wrapper>iframe{
+    width: 100%;
+}
+
+.contact-info>div{
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.contact-info>div>a{
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.contact-info h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-info h6{
+    font-size: 1.25rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.contact-info h5{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.contact-info>svg{
+    width: 24px;
+    height: 24px;
+}
+
+/* footer */
+footer {
+    background: #2E5252;
+    padding: 40px 23px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 9999;
+    }
+
+    .menu-btn i {
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 9999;
+        background-color: #2E5252;
+        transition: all 0.3s ease;
+    }
+
+    .active {
+        left: 0;
+    }
+
+    .navbar>ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5rem;
+        gap: 0;
+    }
+
+    .navbar ul li {
+        margin: 20px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 1.5rem;
+    }
+
+    .header-wrapper {
+        padding: 2rem 3rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .img-wrapper,
+    .about-me {
+        width: 100%;
+    }
+
+    .img-wrapper img{
+        width: 350px;
+        height: auto;
+    }
+
+    .img-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    section {
+        padding: 4.5rem 3rem;
+    }
+
+    .home-content>h2 {
+        font-size: 3.25rem;
+    }
+
+    .logo>a {
+        font-size: 2rem;
+    }
+
+    .home-content>h6 {
+        font-size: 1.5rem;
+    }
+
+    .title{
+        font-size: 2.125rem;
+    }
+
+    
+    .scrolled {
+        padding: 1rem 3rem;
+    }
+    
+    .scrolled .navbar>ul>li>a:hover {
+        color: #2E5252;
+    }
+
+    .skill-content-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-section{
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .contant-info-wrapper{
+        gap: 3rem;
+    }
+
+    .contant-info-wrapper, .map-wrapper{
+        width: 100%;
+    }
+
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 690px) {
+    .header-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .scrolled {
+        padding: .875rem 1.5rem;
+    }
+
+    section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .img-wrapper img {
+        width: 80%;
+    }
+
+    .home-content>h2 {
+        font-size: 3rem;
+    }
+
+    .logo>a {
+        font-size: 1.5rem;
+    }
+
+    .home-content>h6 {
+        font-size: 1.25rem;
+    }
+
+    .title{
+        font-size: 1.85rem;
+    }
+
+    .about p, .skills p, footer p{
+        font-size: 0.875rem;
+    }
+
+    .navbar>ul>li>a:hover {
+        color: #fff;
+    }
+    
+    .scrolled .navbar>ul>li>a:hover {
+        color: #fff;
+    }
+
+    .skill-content-wrapper{
+        gap: 1.5rem;
+    }
+
+    
+}
+
+@media (max-width: 560px) {
+    .skill-content-wrapper{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info h4{
+        font-size: 1.25rem;
+    }
+
+    .contact-info h6, .contact-info>div>a{
+        font-size: 1rem;
+    }
+
+    .contact-info h6{
+        white-space: normal;
+    }
+}
+
+@media (max-width: 352px) {
+    .contact-info>div{
+        flex-direction: column;
+    }
+}
