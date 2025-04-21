@@ -70,7 +70,7 @@ section {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url("../images/Clinic.jpg"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-image: url("../images/clinic1.jpg"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
