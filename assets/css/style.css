@@ -36,6 +36,13 @@ html {
     font-weight: 600;
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo>a>img{
+    height: 36px;
+    margin-right: .35rem;
 }
 
 /* Navbar styles */
@@ -120,6 +127,14 @@ section {
     width: 100%;
     border-radius: 6px;
     object-fit: cover;
+}
+
+/* Small box in about Section */
+.inner-section{
+    width: 170px;
+    height: 200px;
+    border: 1px solid #2E5252;
+    margin-bottom: 1rem;
 }
 
 .about-me {
@@ -249,6 +264,17 @@ footer {
 }
 
 /* Responsive styles */
+
+@media (max-width: 1200px) {
+    .header-wrapper{
+        padding: 2rem 3.5rem;
+    }
+
+    section {
+        padding: 6rem 3.5rem;
+    }
+}
+
 @media (max-width: 947px) {
     .menu-btn {
         display: block;
@@ -443,8 +469,39 @@ footer {
     }
 }
 
-@media (max-width: 352px) {
+@media (max-width: 480px) {
+    .logo>a{
+        font-size: 1.25rem;
+    }
+
+    .logo>a>img {
+        height: 28px;
+        margin-right: .25rem;
+    }
+
+    section {
+        padding: 3.5rem 1rem;
+    }
+
+    .header-wrapper {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 392px) {
     .contact-info>div {
         flex-direction: column;
+    }
+
+    .header-wrapper {
+        padding: 2rem .75rem;
+    }
+
+    section {
+        padding: 3.5rem .75rem;
+    }
+
+    .menu-btn i{
+        font-size: 20px;
     }
 }
