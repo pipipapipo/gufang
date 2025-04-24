@@ -130,8 +130,9 @@ section {
 }
 
 /* Small box in about Section */
-.inner-section img{
+.inner-section>img{
     width: 170px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
